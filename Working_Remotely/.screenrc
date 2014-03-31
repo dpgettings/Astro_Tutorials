@@ -1,0 +1,23 @@
+startup_message off
+
+# Just like the normal terminal
+term xterm
+
+# Change the magic control keybinding from C-a to C-b (MUST HAVE)
+escape ^bB
+
+# Prevent hangups from killing screen -- just detach
+autodetach on
+
+# Clear the screen after `less' (for example)
+altscreen on
+
+# # Caption at the bottom of the screen showing the current status
+# caption always "%{=b dw}:%{-b dw}:%{=b dk}[ %{-b dw}%{-b dg}$USER%{-b dw}@%{-b dg}%H %{=b dk}] [ %= %?%{-b dg}%-Lw%?%{+b dk}(%{+b dw}%n:%t%{+b dk})%?(%u)%?%{-b dw}%?%{-b dg}%+Lw%? %{=b dk}]%{-b dw}:%{+b dw}:"
+
+
+vbell off
+
+# Window list at the bottom. hostname, centered tabs and redmarked active windows
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
